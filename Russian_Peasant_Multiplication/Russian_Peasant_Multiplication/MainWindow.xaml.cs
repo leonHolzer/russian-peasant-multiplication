@@ -43,6 +43,7 @@ namespace Russian_Peasant_Multiplication
             }
         }
 
+        #region InputInfoLogic
         private void txbMultiplicand_GotFocus(object sender, RoutedEventArgs e)
         {
             if (txbMultiplicand.Text == _multiplicandInfo)
@@ -74,5 +75,6 @@ namespace Russian_Peasant_Multiplication
                 txbMultiplier.Text = _multiplierInfo;
             }
         }
+        #endregion
     }
 }
