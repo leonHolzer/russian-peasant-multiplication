@@ -28,7 +28,7 @@ namespace Russian_Peasant_Multiplication
 
         private void btnMultiply_Click(object sender, RoutedEventArgs e)
         {
-
+            txbResult.Text = RussianPeasantMultiplication.Multiply(27, 82).ToString();
         }
     }
 }
