@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using Russian_Peasant_Multiplication_Logic;
 
 namespace Russian_Peasant_Multiplication
 {
@@ -23,6 +24,11 @@ namespace Russian_Peasant_Multiplication
         public MainWindow()
         {
             InitializeComponent();
+        }
+
+        private void btnMultiply_Click(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }
