@@ -18,8 +18,13 @@
     </Window.Resources>
     
     <StackPanel x:Name="splMain" VerticalAlignment="Center" Margin="30 0 30 0">
-        <Label x:Name="lblHeading" Content="Russian Peasant Multiplication" FontSize="18" HorizontalAlignment="Center" Margin="0 0 0 30"/>
+        <Label x:Name="lblHeading" Content="Russian Peasant Multiplication" FontSize="18" HorizontalAlignment="Center" Margin="0 0 0 10"/>
 
+        <StackPanel x:Name="splModes" Orientation="Horizontal" HorizontalAlignment="Center" Margin="0 10 0 30">
+            <RadioButton>efficency mode</RadioButton>
+            <RadioButton>high number mode</RadioButton>
+        </StackPanel>
+        
         <Grid x:Name="grdInput" Margin="0 10 0 10">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="2*"/>
@@ -28,8 +33,8 @@
             </Grid.ColumnDefinitions>
 
             <Label x:Name="lblSymbol" Grid.Column="1" Content="*" HorizontalAlignment="Center"/>
-            <TextBox x:Name="txbMultiplicand" Grid.Column="0" Text="multiplicand"/>
-            <TextBox x:Name="txbMultiplier" Grid.Column="2" Text="multiplier"/>
+            <TextBox x:Name="txbMultiplicand" Grid.Column="0" GotFocus="txbMultiplicand_GotFocus" LostFocus="txbMultiplicand_LostFocus"/>
+            <TextBox x:Name="txbMultiplier" Grid.Column="2" GotFocus="txbMultiplier_GotFocus" LostFocus="txbMultiplier_LostFocus"/>
         </Grid>
 
         <TextBox x:Name="txbResult" IsReadOnly="True" Margin="0 10 0 10"/>

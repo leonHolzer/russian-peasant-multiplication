@@ -21,6 +21,9 @@ namespace Russian_Peasant_Multiplication
     /// </summary>
     public partial class MainWindow : Window
     {
+        string _multiplicandInfo = "multiplicand";
+        string _multiplierInfo = "multiplier";
+
         public MainWindow()
         {
             InitializeComponent();
@@ -35,6 +38,38 @@ namespace Russian_Peasant_Multiplication
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message, "Error", MessageBoxButton.OK, MessageBoxImage.Error);
+            }
+        }
+
+        private void txbMultiplicand_GotFocus(object sender, RoutedEventArgs e)
+        {
+            if (txbMultiplicand.Text == _multiplicandInfo)
+            {
+                txbMultiplicand.Text = "";
+            }
+        }
+
+        private void txbMultiplicand_LostFocus(object sender, RoutedEventArgs e)
+        {
+            if (String.IsNullOrEmpty(txbMultiplicand.Text))
+            {
+                txbMultiplicand.Text = _multiplicandInfo;
+            }
+        }
+
+        private void txbMultiplier_GotFocus(object sender, RoutedEventArgs e)
+        {
+            if (txbMultiplicand.Text == _multiplierInfo)
+            {
+                txbMultiplicand.Text = "";
+            }
+        }
+
+        private void txbMultiplier_LostFocus(object sender, RoutedEventArgs e)
+        {
+            if (String.IsNullOrEmpty(txbMultiplicand.Text))
+            {
+                txbMultiplicand.Text = _multiplierInfo;
             }
         }
     }
