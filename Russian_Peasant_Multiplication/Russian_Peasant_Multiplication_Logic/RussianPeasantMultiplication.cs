@@ -2,6 +2,9 @@
 {
     public static class RussianPeasantMultiplication
     {
+        // check negative
+        // absoulte function
+
         public static int Multiply(int multiplicand, int multiplier)
         {
             bool negative = false;
