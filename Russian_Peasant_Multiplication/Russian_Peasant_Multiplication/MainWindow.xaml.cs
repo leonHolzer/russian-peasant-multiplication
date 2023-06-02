@@ -28,7 +28,14 @@ namespace Russian_Peasant_Multiplication
 
         private void btnMultiply_Click(object sender, RoutedEventArgs e)
         {
-            txbResult.Text = RussianPeasantMultiplication.Multiply(27, 82).ToString();
+            try
+            {
+                txbResult.Text = RussianPeasantMultiplication.Multiply(Convert.ToInt32(txbMultiplicand.Text), Convert.ToInt32(txbMultiplier.Text)).ToString();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Error", MessageBoxButton.OK, MessageBoxImage.Error);
+            }
         }
     }
 }
