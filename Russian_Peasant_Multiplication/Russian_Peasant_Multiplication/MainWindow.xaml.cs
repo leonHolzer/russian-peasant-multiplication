@@ -27,6 +27,8 @@ namespace Russian_Peasant_Multiplication
         public MainWindow()
         {
             InitializeComponent();
+            txbMultiplicand_LostFocus(new (), new RoutedEventArgs());
+            txbMultiplier_LostFocus(new (), new RoutedEventArgs());
         }
 
         private void btnMultiply_Click(object sender, RoutedEventArgs e)
@@ -59,17 +61,17 @@ namespace Russian_Peasant_Multiplication
 
         private void txbMultiplier_GotFocus(object sender, RoutedEventArgs e)
         {
-            if (txbMultiplicand.Text == _multiplierInfo)
+            if (txbMultiplier.Text == _multiplierInfo)
             {
-                txbMultiplicand.Text = "";
+                txbMultiplier.Text = "";
             }
         }
 
         private void txbMultiplier_LostFocus(object sender, RoutedEventArgs e)
         {
-            if (String.IsNullOrEmpty(txbMultiplicand.Text))
+            if (String.IsNullOrEmpty(txbMultiplier.Text))
             {
-                txbMultiplicand.Text = _multiplierInfo;
+                txbMultiplier.Text = _multiplierInfo;
             }
         }
     }
