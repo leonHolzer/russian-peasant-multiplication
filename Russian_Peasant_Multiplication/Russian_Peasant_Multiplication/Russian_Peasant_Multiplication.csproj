@@ -8,7 +8,15 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Montserrat-VariableFont_wght.ttf" />
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\Russian_Peasant_Multiplication_Logic\Russian_Peasant_Multiplication_Logic.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Montserrat-VariableFont_wght.ttf" />
   </ItemGroup>
 
 </Project>

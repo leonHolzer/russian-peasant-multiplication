@@ -5,18 +5,22 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Russian_Peasant_Multiplication"
         mc:Ignorable="d"
-        Title="Russian Peasant Multiplication" Height="500" Width="500">
+        Title="Russian Peasant Multiplication" Height="500" Width="500"
+        FontFamily="/#Montserrat VariableFont">
 
     <Window.Resources>
         <Style TargetType="TextBox">
             <Setter Property="HorizontalContentAlignment" Value="Center"/>
             <Setter Property="VerticalContentAlignment" Value="Center"/>
+            <Setter Property="BorderBrush" Value="#005b9a"/>
         </Style>
         <Style TargetType="RadioButton">
             <Setter Property="Margin" Value="5 0 5 0"/>
         </Style>
         <Style TargetType="Button">
             <Setter Property="Background" Value="Transparent"/>
+            <Setter Property="Foreground" Value="#a5c400"/>
+            <Setter Property="BorderBrush" Value="#a5c400"/>
         </Style>
     </Window.Resources>
     
