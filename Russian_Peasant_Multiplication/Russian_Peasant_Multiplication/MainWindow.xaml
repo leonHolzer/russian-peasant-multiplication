@@ -18,8 +18,8 @@
             <Setter Property="Margin" Value="5 0 5 0"/>
         </Style>
         <Style TargetType="Button">
-            <Setter Property="Background" Value="Transparent"/>
-            <Setter Property="Foreground" Value="#a5c400"/>
+            <Setter Property="Foreground" Value="White"/>
+            <Setter Property="Background" Value="#a5c400"/>
             <Setter Property="BorderBrush" Value="#a5c400"/>
         </Style>
     </Window.Resources>

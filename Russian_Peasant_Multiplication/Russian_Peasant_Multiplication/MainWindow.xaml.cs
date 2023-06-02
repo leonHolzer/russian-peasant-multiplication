@@ -42,7 +42,7 @@ namespace Russian_Peasant_Multiplication
 
                 else if ((bool)rdbHighNumberMode.IsChecked)
                 {
-                    txbResult.Text = RussianPeasantMultiplication.Multiply((long)Convert.ToInt32(txbMultiplicand.Text), (long)Convert.ToInt32(txbMultiplier.Text)).ToString();
+                    txbResult.Text = RussianPeasantMultiplication.Multiply(Convert.ToInt64(txbMultiplicand.Text), Convert.ToInt64(txbMultiplier.Text)).ToString();
                 }
             }
             catch (Exception ex)

@@ -1,13 +1,26 @@
-﻿namespace Russian_Peasant_Multiplication_Logic
+﻿using System.Diagnostics;
+
+namespace Russian_Peasant_Multiplication_Logic
 {
     public static class RussianPeasantMultiplication
     {
         public static int Multiply(int multiplicand, int multiplier)
         {
-            bool negative = MathFunctions.ContainsOneNegativeNumber(new long[] { multiplicand, multiplier });
+            //this bit could be handled with bitwise operators for cleaner code and better performance, but sadly I do not know enough about them
+            bool negative = false;
 
-            multiplicand = (int)MathFunctions.SetAbsolute(multiplicand);
-            multiplier = (int)MathFunctions.SetAbsolute(multiplier);
+            if (multiplicand < 0)
+            {
+                multiplicand *= -1;
+                negative = true;
+            }
+
+            if (multiplier < 0)
+            {
+                multiplier *= -1;
+                negative = !negative ? true : false;
+            }
+
 
             int result = 0;
 
@@ -27,10 +40,20 @@
 
         public static long Multiply(long multiplicand, long multiplier)
         {
-            bool negative = MathFunctions.ContainsOneNegativeNumber(new long[] { multiplicand, multiplier });
+            bool negative = false;
 
-            multiplicand = MathFunctions.SetAbsolute(multiplicand);
-            multiplier = MathFunctions.SetAbsolute(multiplier);
+            if (multiplicand < 0)
+            {
+                multiplicand *= -1;
+                negative = true;
+            }
+
+            if (multiplier < 0)
+            {
+                multiplier *= -1;
+                negative = !negative ? true : false;
+            }
+
 
             long result = 0;
 
