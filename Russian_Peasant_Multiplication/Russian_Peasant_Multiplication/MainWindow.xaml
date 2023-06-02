@@ -6,8 +6,34 @@
         xmlns:local="clr-namespace:Russian_Peasant_Multiplication"
         mc:Ignorable="d"
         Title="Russian Peasant Multiplication" Height="500" Width="500">
-    
-    <Grid>
 
-    </Grid>
+    <Window.Resources>
+        <Style TargetType="TextBox">
+            <Setter Property="HorizontalContentAlignment" Value="Center"/>
+            <Setter Property="VerticalContentAlignment" Value="Center"/>
+        </Style>
+        <Style TargetType="Button">
+            <!-- button styling -->
+        </Style>
+    </Window.Resources>
+    
+    <StackPanel x:Name="splMain" VerticalAlignment="Center" Margin="30 0 30 0">
+        <Label x:Name="lblHeading" Content="Russian Peasant Multiplication" FontSize="18" HorizontalAlignment="Center" Margin="0 0 0 30"/>
+
+        <Grid x:Name="grdInput" Margin="0 10 0 10">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="2*"/>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="2*"/>
+            </Grid.ColumnDefinitions>
+
+            <Label x:Name="lblSymbol" Grid.Column="1" Content="*" HorizontalAlignment="Center"/>
+            <TextBox x:Name="txbMultiplicand" Grid.Column="0" Text="multiplicand"/>
+            <TextBox x:Name="txbMultiplier" Grid.Column="2" Text="multiplier"/>
+        </Grid>
+
+        <TextBox x:Name="txbResult" IsReadOnly="True" Margin="0 10 0 10"/>
+
+        <Button x:Name="btnMultiply" Content="multiply" HorizontalAlignment="Center"/>
+    </StackPanel>
 </Window>
