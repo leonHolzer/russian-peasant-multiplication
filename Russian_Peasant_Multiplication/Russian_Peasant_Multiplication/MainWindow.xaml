@@ -24,8 +24,8 @@
         <Label x:Name="lblHeading" Content="Russian Peasant Multiplication" FontSize="18" HorizontalAlignment="Center" Margin="0 0 0 10"/>
 
         <StackPanel x:Name="splModes" Orientation="Horizontal" HorizontalAlignment="Center" Margin="0 10 0 30">
-            <RadioButton>efficency mode</RadioButton>
-            <RadioButton>high number mode</RadioButton>
+            <RadioButton x:Name="rdbEfficencyMode" IsChecked="True">efficency mode</RadioButton>
+            <RadioButton x:Name="rdbHighNumberMode">high number mode</RadioButton>
         </StackPanel>
         
         <Grid x:Name="grdInput" Margin="0 10 0 10">

@@ -35,7 +35,15 @@ namespace Russian_Peasant_Multiplication
         {
             try
             {
-                txbResult.Text = RussianPeasantMultiplication.Multiply(Convert.ToInt32(txbMultiplicand.Text), Convert.ToInt32(txbMultiplier.Text)).ToString();
+                if ((bool)rdbEfficencyMode.IsChecked)
+                {
+                    txbResult.Text = RussianPeasantMultiplication.Multiply(Convert.ToInt32(txbMultiplicand.Text), Convert.ToInt32(txbMultiplier.Text)).ToString();
+                }
+
+                else if ((bool)rdbHighNumberMode.IsChecked)
+                {
+                    txbResult.Text = RussianPeasantMultiplication.Multiply((long)Convert.ToInt32(txbMultiplicand.Text), (long)Convert.ToInt32(txbMultiplier.Text)).ToString();
+                }
             }
             catch (Exception ex)
             {
