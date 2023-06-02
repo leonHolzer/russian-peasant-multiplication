@@ -2,19 +2,12 @@
 {
     public static class RussianPeasantMultiplication
     {
-        // check negative
-        // absoulte function
-
         public static int Multiply(int multiplicand, int multiplier)
         {
-            bool negative = false;
-            if ((multiplicand < 0 && multiplier > 0) || (multiplicand > 0 && multiplier < 0))
-            {
-                negative = true;
-            }
+            bool negative = MathFunctions.ContainsOneNegativeNumber(new long[] { multiplicand, multiplier });
 
-            multiplicand = multiplicand < 0 ? multiplicand *-1 : multiplicand;
-            multiplier = multiplier < 0 ? multiplier * -1 : multiplier;
+            multiplicand = (int)MathFunctions.SetAbsolute(multiplicand);
+            multiplier = (int)MathFunctions.SetAbsolute(multiplier);
 
             int result = 0;
 
@@ -34,14 +27,10 @@
 
         public static long Multiply(long multiplicand, long multiplier)
         {
-            bool negative = false;
-            if ((multiplicand < 0 && multiplier > 0) || (multiplicand > 0 && multiplier < 0))
-            {
-                negative = true;
-            }
+            bool negative = MathFunctions.ContainsOneNegativeNumber(new long[] { multiplicand, multiplier });
 
-            multiplicand = multiplicand < 0 ? multiplicand * -1 : multiplicand;
-            multiplier = multiplier < 0 ? multiplier * -1 : multiplier;
+            multiplicand = MathFunctions.SetAbsolute(multiplicand);
+            multiplier = MathFunctions.SetAbsolute(multiplier);
 
             long result = 0;
 
