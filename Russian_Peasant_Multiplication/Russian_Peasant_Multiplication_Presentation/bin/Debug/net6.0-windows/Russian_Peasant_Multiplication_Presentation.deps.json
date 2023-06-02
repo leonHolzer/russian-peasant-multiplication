@@ -1,0 +1,36 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v6.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v6.0": {
+      "Russian_Peasant_Multiplication_Presentation/1.0.0": {
+        "dependencies": {
+          "Russian_Peasant_Multiplication_Logic": "1.0.0"
+        },
+        "runtime": {
+          "Russian_Peasant_Multiplication_Presentation.dll": {}
+        }
+      },
+      "Russian_Peasant_Multiplication_Logic/1.0.0": {
+        "runtime": {
+          "Russian_Peasant_Multiplication_Logic.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Russian_Peasant_Multiplication_Presentation/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Russian_Peasant_Multiplication_Logic/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
