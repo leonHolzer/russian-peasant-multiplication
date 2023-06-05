@@ -9,6 +9,13 @@ namespace Russian_Peasant_Multiplication_Logic
             //this bit could be handled with bitwise operators for cleaner code and better performance, but sadly I do not know enough about them
             bool negative = false;
 
+            if (multiplicand > multiplier)
+            {
+                int temp = multiplicand;
+                multiplicand = multiplier;
+                multiplier = temp;
+            }
+            
             if (multiplicand < 0)
             {
                 multiplicand *= -1;
