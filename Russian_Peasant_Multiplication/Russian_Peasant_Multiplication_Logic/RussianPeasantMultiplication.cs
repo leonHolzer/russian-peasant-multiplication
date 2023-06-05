@@ -9,6 +9,7 @@ namespace Russian_Peasant_Multiplication_Logic
             //this bit could be handled with bitwise operators for cleaner code and better performance, but sadly I do not know enough about them
             bool negative = false;
 
+            //switch multiplicand and multiplier to always divide the smaller number
             if (multiplicand > multiplier)
             {
                 int temp = multiplicand;
@@ -16,6 +17,7 @@ namespace Russian_Peasant_Multiplication_Logic
                 multiplier = temp;
             }
             
+            //set all numbers absolute, set flag if result has to be negative
             if (multiplicand < 0)
             {
                 multiplicand *= -1;
@@ -25,7 +27,7 @@ namespace Russian_Peasant_Multiplication_Logic
             if (multiplier < 0)
             {
                 multiplier *= -1;
-                negative = !negative ? true : false;
+                negative = negative ? false : true;
             }
 
 
@@ -49,6 +51,15 @@ namespace Russian_Peasant_Multiplication_Logic
         {
             bool negative = false;
 
+            //switch multiplicand and multiplier to always divide the smaller number
+            if (multiplicand > multiplier)
+            {
+                long temp = multiplicand;
+                multiplicand = multiplier;
+                multiplier = temp;
+            }
+
+            //set all numbers absolute, set flag if result has to be negative
             if (multiplicand < 0)
             {
                 multiplicand *= -1;
