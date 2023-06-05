@@ -7,6 +7,7 @@ namespace Russian_Peasant_Multiplication_Logic
         public static int Multiply(int multiplicand, int multiplier)
         {
             //this bit could be handled with bitwise operators for cleaner code and better performance, but sadly I do not know enough about them
+            //a possible improvement for this algorithm is swapping the multiplicand for the multiplier if it's even to minimize the number of additions, but sadly I do not know how this would improve efficency in the code (or when I should use it to improve efficency)
             bool negative = false;
 
             //switch multiplicand and multiplier to always divide the smaller number
